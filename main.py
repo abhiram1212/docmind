@@ -19,7 +19,10 @@ load_dotenv()
 app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=[
+        "http://localhost:5173",
+        "http://docmind-frontend-app.s3-website-us-east-1.amazonaws.com"
+    ],
     allow_methods=["GET", "POST"],
     allow_headers=["*"],
 )
