@@ -21,7 +21,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "http://docmind-frontend-app.s3-website-us-east-1.amazonaws.com"
+        "http://docmind-frontend-app.s3-website-us-east-1.amazonaws.com",
+        "https://d1trzl7talcx36.cloudfront.net"
     ],
     allow_methods=["GET", "POST"],
     allow_headers=["*"],
