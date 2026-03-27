@@ -24,7 +24,7 @@ function UploadSection({ onUploadSuccess }){
     formData.append("file", file)
 
     // 3. send to your FastAPI backend
-    const response = await fetch("http://23.23.6.53:8000/upload", {
+    const response = await fetch("https://23.23.6.53.nip.io/upload", {
         method: "POST",
         body: formData
     })

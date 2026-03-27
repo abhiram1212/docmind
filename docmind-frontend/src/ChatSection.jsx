@@ -29,7 +29,7 @@ async function handelAsk(){
             const formData = new FormData()
             formData.append("file", pendingFile)
 
-            const uploadResponse = await fetch("http://23.23.6.53:8000/upload", {
+            const uploadResponse = await fetch("https://23.23.6.53.nip.io/upload", {
                 method: "POST",
                 body: formData
             })
@@ -46,7 +46,7 @@ async function handelAsk(){
             setUploading(false)
         }
 
-        const response = await fetch("http://23.23.6.53:8000/ask", {
+        const response = await fetch("https://23.23.6.53.nip.io/ask", {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ session_id: activeSessionId, question: currentInput })
